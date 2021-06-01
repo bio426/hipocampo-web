@@ -2,20 +2,4 @@
   width: 100%;
   min-height: 100vh;
 
-  .container{
-    width: 60%;
-    margin: 0 auto;
-
-    img{
-      width: 100%;
-      height: auto;
-    }
-
-    .wrapper{
-      display: grid;
-      grid-template-columns: repeat(5,1fr);
-      column-gap: 30px;
-      row-gap: 30px;
-    }
-  }
 }
