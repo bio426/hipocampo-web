@@ -1,0 +1,68 @@
+#Card{
+  width: 100%;
+  padding: 0 1rem;
+  border: 1px solid gray;
+  text-align: center;
+  transition: all .2s ease;
+
+  img{
+    display: block;
+    width: 70%;
+    margin: 1rem auto;
+  }
+
+  span{
+    display: block;
+  }
+
+  .cardTitle{
+    margin-bottom: .2rem;
+    font-weight: 50;
+  }
+
+  .cardAuthor{
+    color: #585858;
+    font-size: .8rem;
+  }
+
+  .cardPrice{
+    margin: 1rem;
+    color: #e9693a;
+    font-weight: bold
+  }
+
+  &:hover button{
+    opacity: 1;
+  }
+  &:hover{
+    box-shadow: 0 0 15px rgba($color: #000000, $alpha: .3);
+    transform: scale(1.02);
+  }
+
+  button{
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    margin: 1rem auto;
+    padding: .6rem;
+    background: #0095fa;
+    color: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-weight: 500;
+    opacity: 0;
+    transition: all .2s ease;
+
+    &:active{
+      background: #0087e4;
+    }
+
+    svg{
+      margin-right: .5rem;
+      width: 1.2rem;
+      height: auto;
+      fill: #fff;
+    }
+  }
+}
