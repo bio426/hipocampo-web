@@ -1,3 +1,36 @@
 footer{
-  
+  width: 100%;
+  padding: 2.5rem 0;
+  background: #1e1619;
+  color: #ebc6af;
+
+  .container{
+    width: 60% !important;
+  }
+
+  img{
+    display: block;
+    width: 3rem;
+    height: auto;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+  }
+
+  .categories{
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+
+    a{
+      color: #ebc6af;
+      text-decoration: none;
+    }
+  }
+
+  .info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    row-gap: 2rem;
+  }
 }

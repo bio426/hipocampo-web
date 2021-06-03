@@ -1,0 +1,18 @@
+#Bilboard{
+  position: relative;
+  margin-top: 2rem;
+  width: 100%;
+  height: 400px;
+
+  img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .5s ease;
+  }
+
+  .show{
+    opacity: 1;
+  }
+}
