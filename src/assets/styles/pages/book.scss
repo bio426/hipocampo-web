@@ -1,0 +1,127 @@
+#book {
+	width: 100%;
+	min-height: 100vh;
+
+	.indications {
+		width: 100%;
+		margin: 2rem 0;
+		padding: 1rem 0;
+		background: #ffe9d7;
+	}
+
+	.container {
+		width: 80%;
+		margin: 0 auto;
+
+		.bookInfo {
+			display: grid;
+			grid-template-columns: 2fr 2fr 1fr;
+			width: 100%;
+			padding: 2rem 0;
+
+			img {
+				display: block;
+				width: 80%;
+				margin: 0 auto;
+			}
+
+			.bookDescription {
+				h2 {
+					padding: 0;
+					font-weight: 600;
+				}
+
+				span {
+					display: block;
+					padding: 1rem 0;
+				}
+
+				h4 {
+					font-weight: 600;
+					font-size: 1.2rem;
+					margin-bottom: 0.5rem;
+				}
+			}
+
+			.features {
+				ul {
+					list-style: none;
+
+					li {
+						display: block;
+						margin-bottom: 0.8rem;
+
+						h5 {
+							margin-bottom: 0.2rem;
+						}
+
+						span {
+							display: block;
+						}
+					}
+				}
+
+				.price {
+					width: 100%;
+					padding: 1rem;
+					background: #ffe9d7;
+					text-align: center;
+
+					.main {
+						display: block;
+						padding: 1rem;
+						color: #0095fa;
+						font-size: 1.5rem;
+						font-weight: 600;
+					}
+
+					.discount {
+						display: block;
+						font-size: 0.8rem;
+						font-weight: 500;
+					}
+
+					button {
+            display: flex;
+            justify-content: center;
+            width: 70%;
+            margin: .8rem auto;
+            padding: .5rem;
+            background: #0095fa;
+            color: #fff;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            transition: all .2s ease;
+
+						&:active {
+							background: #0087e4;
+						}
+
+						svg {
+							margin-right: 0.5rem;
+							width: 1.4rem;
+							height: auto;
+							fill: #fff;
+						}
+					}
+				}
+			}
+		}
+
+		h2 {
+			padding: 1rem 3rem;
+			font-weight: 500;
+		}
+
+		.wrapper {
+			display: grid;
+			grid-template-columns: repeat(5, 1fr);
+			column-gap: 1rem;
+			width: 100%;
+			padding-bottom: 4rem;
+		}
+	}
+}

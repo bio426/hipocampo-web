@@ -1,8 +1,14 @@
 <template>
 	<div id="Bilboard">
-		<img class="show" src="https://picsum.photos/200/300" />
-		<img src="https://picsum.photos/201/300" />
-		<img src="https://picsum.photos/202/300" />
+		<router-link class="show" to="">
+			<img src="https://picsum.photos/200/300" />
+		</router-link>
+		<router-link to="/catalog">
+			<img src="https://picsum.photos/201/300" />
+		</router-link>
+		<router-link to="">
+			<img src="https://picsum.photos/202/300" />
+		</router-link>
 	</div>
 </template>
 
@@ -12,25 +18,27 @@ import { onMounted } from "vue"
 export default {
 	name: "Bilboard",
 	setup() {
-		let images
+		let banners
 		let active = 0
 		onMounted(() => {
 			let slider = document.getElementById("Bilboard")
-			images = slider.children
+			banners = slider.children
 			setInterval(change, 3000)
 		})
 
 		function change() {
-			images[active].classList.remove("show")
-			if (active < images.length - 1) {
+			banners[active].classList.remove("show")
+			if (active < banners.length - 1) {
 				active++
 			} else {
 				active = 0
 			}
-			images[active].classList.add("show")
+			banners[active].classList.add("show")
 		}
 
-		return {}
+		return {
+
+		}
 	},
 }
 </script>
