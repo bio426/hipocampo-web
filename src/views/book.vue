@@ -11,7 +11,7 @@
 		</section>
 		<div class="container">
 			<section class="bookInfo">
-				<img src="@/assets/libro.jpg" />
+				<img src="@/assets/images/libro.jpg" />
 				<div class="bookDescription">
 					<h2>Nombre del libro</h2>
 					<span>Autor del libro</span>

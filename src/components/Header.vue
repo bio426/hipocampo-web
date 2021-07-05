@@ -46,7 +46,7 @@
 				<div class="pageLinks">
 					<a href="#" v-for="i in 4" :key="i">Catalogo</a>
 				</div>
-				<img src="@/assets/hipocampo.jpeg" />
+				<img src="@/assets/images/hipocampo.jpeg" />
 				<div class="utils">
 					<div class="search">
 						<input type="text" placeholder="Busca un libro" />

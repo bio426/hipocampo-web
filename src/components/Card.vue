@@ -1,6 +1,6 @@
 <template>
 	<div id="Card">
-		<img src="@/assets/libro.jpg" />
+		<img src="@/assets/images/libro.jpg" />
 		<span class="cardTitle">Del Campo a la Ciudad</span>
 		<span class="cardAuthor">Jinre Guevara Diaz</span>
 		<span class="cardPrice">S/ 99.99</span>
