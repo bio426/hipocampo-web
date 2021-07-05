@@ -1,5 +1,5 @@
 <template>
-	<header>
+	<header id="Header">
 		<div class="contactInfo">
 			<div class="container">
 				<a href="#" v-for="i in 4" :key="i">
@@ -37,7 +37,7 @@
 							/>
 						</g>
 					</svg>
-					LibrosHipocampo@gmail.com
+					<span>LibrosHipocampo@gmail.com</span>
 				</a>
 			</div>
 		</div>

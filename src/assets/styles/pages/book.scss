@@ -125,3 +125,27 @@
 		}
 	}
 }
+
+@media only screen and (max-width: 600px) {
+	#book{
+		.indications{
+			margin-bottom: 0;
+		}
+
+		.container{
+			.bookInfo{
+				grid-template-columns: 1fr;
+				row-gap: 1rem;
+
+				img{
+					width: 100%;
+				}
+			}
+
+			.wrapper{
+				grid-template-columns: 1fr;
+				row-gap: 1rem;
+			}
+		}
+	}
+}

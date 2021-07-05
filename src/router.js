@@ -5,7 +5,6 @@ const routes = [
 	{ path: "/", component: index },
 	{ path: "/catalog", component: () => import("@/views/catalog.vue") },
 	{ path: "/book", component: () => import("@/views/book.vue") },
-	{ path: "/cart", component: () => import("@/views/cart.vue") },
 ]
 
 const router = createRouter({

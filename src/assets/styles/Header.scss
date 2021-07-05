@@ -1,6 +1,6 @@
 /*--Header usa el width de los containers de la pagina que lo contiene--*/
 
-header {
+#Header {
 	width: 100%;
 
 	.contactInfo {
@@ -86,6 +86,36 @@ header {
 				svg {
 					width: 2rem;
 					height: auto;
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	#Header{
+		.contactInfo{
+			a{
+				span{
+					display: none;
+				}
+			}
+		}
+
+		.headerMain{
+			height: auto;
+
+			.container{
+				flex-direction: column-reverse;
+
+				.pageLinks{
+					width: 100%;
+					margin: 1rem 0;
+				}
+
+				img{
+					order: 2;
+					margin: 0 auto;
 				}
 			}
 		}

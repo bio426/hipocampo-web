@@ -93,3 +93,20 @@
     }
   }
 }
+
+@media only screen and (max-width: 600px) {
+  #catalog{
+    .container{
+      width: 90%;
+
+      .filters{
+        flex-direction: column;
+        row-gap: 1rem;
+      }
+
+      .wrapper{
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+}

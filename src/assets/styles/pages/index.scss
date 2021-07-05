@@ -16,6 +16,7 @@
     display: grid;
     grid-template-columns: repeat(5,1fr);
     column-gap: 1rem;
+    row-gap: 1rem;
     width: 100%;
   }
 
@@ -37,6 +38,10 @@
       justify-content: center;
       margin-bottom: 1rem;
 
+      input{
+        padding: 0 .5rem;
+      }
+
       button{
         padding: 0 .5rem;
         background: #f6a78b;
@@ -55,6 +60,22 @@
         width: 2rem;
         height: auto;
         margin: 0 1rem;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #index{
+    .container{
+      width: 90%;
+
+      h2{
+        text-align: center;
+      }
+
+      .wrapper{
+        grid-template-columns: 1fr;
       }
     }
   }

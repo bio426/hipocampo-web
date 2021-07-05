@@ -1,7 +1,7 @@
 <template>
-	<footer>
+	<footer id="Footer">
 		<img src="@/assets/hipocampo.jpeg" />
-		<div class="container">
+		<div class="footerContainer">
 			<ul class="categories">
 				<li v-for="i in 7" :key="i">
 					<a href="#">Category</a>

@@ -10,7 +10,7 @@
         <Card v-for="i in 5" :key="i" />
       </div>
     </div>
-    <Authors />
+    <Authors v-if="false" />
     <section class="subscription">
       <h3>Lorem ipsum dolor sit amet consectetur.</h3>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore qui voluptates ut sint deserunt saepe!</p>
