@@ -24,7 +24,7 @@
 					</select>
 				</label>
 				<label>
-					Año de publicacion
+					Año de publicacion xd
 					<select name="year">
 						<option value="1">2001</option>
 						<option value="2">2002</option>
@@ -41,7 +41,13 @@
 				<button>Aplicar</button>
 			</div>
 			<div class="wrapper">
-				<Card class="noanim" v-for="i in 15" :key="i" />
+				<Card
+					class="noanim"
+					v-for="(book, index) in books"
+					:key="index"
+					:book="book"
+					noHover
+				/>
 			</div>
 			<nav class="pagination">
 				<button>
@@ -79,7 +85,8 @@
 </template>
 
 <script>
-import {} from "vue"
+import { ref, onMounted } from "vue"
+import firebase from "firebase/app"
 
 import Header from "@/components/Header.vue"
 import Card from "@/components/Card.vue"
@@ -91,6 +98,57 @@ export default {
 		Header,
 		Card,
 		Footer,
+	},
+	setup() {
+		const db = firebase.firestore()
+
+		let books = ref([])
+		let last = null
+
+		async function getBooks() {
+			let snapshot = await db.collection("books").orderBy("name").limit(5).get()
+			snapshot.forEach((doc) => {
+				books.value.push({
+					id: doc.id,
+					...doc.data(),
+				})
+			})
+			last = books.value[books.value.length - 1].name
+			// console.log(last)
+			loadMore = true
+		}
+		getBooks()
+
+		// Infinite scroll
+		let loadMore = false
+		document.addEventListener("scroll", loadOnScroll)
+
+		async function loadOnScroll() {
+			if (!loadMore) {
+				return 0
+			}
+			if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+				loadMore = false
+				let snapshot = await db
+					.collection("books")
+					.orderBy("name")
+					.startAfter(last)
+					.limit(5)
+					.get()
+				snapshot.forEach((doc) => {
+					books.value.push({
+						id: doc.id,
+						...doc.data(),
+					})
+				})
+				last = books.value[books.value.length - 1].name
+				loadMore = true
+			}
+		}
+
+		return {
+			books,
+		}
 	},
 }
 </script>

@@ -1,9 +1,9 @@
 <template>
-	<div id="Card">
-		<img src="@/assets/images/libro.jpg" />
-		<span class="cardTitle">Del Campo a la Ciudad</span>
-		<span class="cardAuthor">Jinre Guevara Diaz</span>
-		<span class="cardPrice">S/ 99.99</span>
+	<div id="Card" :class="{ noanim: noHover}" >
+		<img :src="book.image" @click="goToBook" />
+		<span class="cardTitle">{{book.name}}</span>
+		<span class="cardAuthor">{{book.author}}</span>
+		<span class="cardPrice">S/ {{book.price || 0}}</span>
 		<button>
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.391 450.391">
 				<g>
@@ -29,14 +29,31 @@
 					/>
 				</g>
 			</svg>
-      Agregar orden
+			Agregar orden
 		</button>
 	</div>
 </template>
 
 <script>
+import { useRouter } from "vue-router"
+
 export default {
 	name: "Card",
+	props: {
+		book: Object,
+		noHover: Boolean
+	},
+	setup(props){
+		const router = useRouter()
+
+		function goToBook(){
+			router.push(`/book/${props.book.id}`)
+		}
+
+		return {
+			goToBook
+		}
+	}
 }
 </script>
 

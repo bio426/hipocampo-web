@@ -11,16 +11,13 @@
 		</section>
 		<div class="container">
 			<section class="bookInfo">
-				<img src="@/assets/images/libro.jpg" />
+				<img :src="book.image" />
 				<div class="bookDescription">
-					<h2>Nombre del libro</h2>
-					<span>Autor del libro</span>
+					<h2>{{book.name}}</h2>
+					<span>{{book.author}}</span>
 					<h4>Descripción</h4>
-					<p v-for="i in 4" :key="i">
-						Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-						Consequatur harum numquam veritatis, voluptates impedit inventore
-						sit, officia accusantium odio porro officiis sequi consectetur
-						itaque ducimus recusandae laudantium, temporibus deserunt tempore.
+					<p>
+						{{book.description}}
 					</p>
 				</div>
 				<div class="features">
@@ -68,7 +65,7 @@
 			</section>
 			<h2>Libros Relacionados</h2>
 			<div class="wrapper">
-				<Card v-for="i in 5" :key="i" />
+				<!-- <Card v-for="i in 5" :key="i" /> -->
 			</div>
 		</div>
 		<Footer />
@@ -76,7 +73,9 @@
 </template>
 
 <script>
-import {} from "vue"
+import {ref} from "vue"
+import { useRoute } from "vue-router"
+import firebase from "firebase/app"
 
 import Header from "@/components/Header.vue"
 import Card from "@/components/Card.vue"
@@ -88,6 +87,28 @@ export default {
 		Header,
 		Card,
 		Footer,
+	},
+	setup() {
+		const route = useRoute()
+		const db = firebase.firestore()
+
+		let book = ref({
+			image: "",
+			name: "",
+			author: "",
+			description: "",
+			price: 0
+		})
+
+		async function loadBookData() {
+			let snapshot = await db.collection("books").doc(route.params.id).get()
+			book.value = snapshot.data()
+		}
+		loadBookData()
+
+		return {
+			book
+		}
 	},
 }
 </script>

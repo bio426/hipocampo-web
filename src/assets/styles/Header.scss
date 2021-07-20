@@ -64,24 +64,6 @@
 			align-items: center;
 			width: 30%;
 
-			.search {
-				display: flex;
-				padding: 0.5rem;
-				background: #ffeae9e9;
-				border-radius: 1rem;
-
-				input {
-					background: none;
-					border: none;
-					outline: none;
-				}
-
-				svg {
-					width: 1rem;
-					height: auto;
-				}
-			}
-
 			a {
 				svg {
 					width: 2rem;
