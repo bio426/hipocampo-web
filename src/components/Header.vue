@@ -44,9 +44,14 @@
 		<div class="headerMain">
 			<div class="container">
 				<div class="pageLinks">
-					<a href="#" v-for="i in 4" :key="i">Catalogo</a>
+					<router-link to="/catalog">Catálogo</router-link>
+					<router-link to="/examples">Muestras</router-link>
+					<router-link to="/about">Sobre Nosotros</router-link>
+					<router-link to="/contact">Contacto</router-link>
 				</div>
-				<img src="@/assets/images/hipocampo.jpeg" />
+				<router-link to="/" class="mainTitle">
+					<img src="@/assets/images/hipocampo-title.jpg" />
+				</router-link>
 				<div class="utils">
 					<BookSearch />
 					<a href="#" v-for="i in 3" :key="i">
@@ -71,8 +76,8 @@ import BookSearch from "@/components/BookSearch.vue"
 export default {
 	name: "Header",
 	components: {
-		BookSearch
-	}
+		BookSearch,
+	},
 }
 </script>
 

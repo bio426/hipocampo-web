@@ -13,11 +13,11 @@
 			<section class="bookInfo">
 				<img :src="book.image" />
 				<div class="bookDescription">
-					<h2>{{book.name}}</h2>
-					<span>{{book.author}}</span>
+					<h2>{{ book.name }}</h2>
+					<span><strong>Autor: </strong>{{ book.author }}</span>
 					<h4>Descripción</h4>
 					<p>
-						{{book.description}}
+						{{ book.description }}
 					</p>
 				</div>
 				<div class="features">
@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import {ref} from "vue"
+import { ref, watch } from "vue"
 import { useRoute } from "vue-router"
 import firebase from "firebase/app"
 
@@ -97,7 +97,7 @@ export default {
 			name: "",
 			author: "",
 			description: "",
-			price: 0
+			price: 0,
 		})
 
 		async function loadBookData() {
@@ -106,8 +106,13 @@ export default {
 		}
 		loadBookData()
 
+		watch(
+			() => route.params.id,
+			() => loadBookData()
+		)
+
 		return {
-			book
+			book,
 		}
 	},
 }

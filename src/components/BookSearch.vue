@@ -7,7 +7,9 @@
 			placeholder="Busca un libro"
 		/>
 		<ul>
-			<li @click="goToSuggestion(i)" v-for="i in suggestions" :key="i">{{i}}</li>
+			<li @click="goToSuggestion(i)" v-for="i in suggestions" :key="i">
+				{{ i.name }}
+			</li>
 		</ul>
 		<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512.005 512.005">
 			<path
@@ -21,65 +23,63 @@
 </template>
 
 <script>
-import { ref } from "vue"
+import { ref, computed } from "vue"
+import { useStore } from "vuex"
+import { useRouter } from "vue-router"
+import firebase from "firebase/app"
 
 export default {
 	name: "BookSearch",
 	setup() {
-		let fruits = ["manzana", "pera", "mango", "platano", "fresa", "uva"]
+		const store = useStore()
+		const router = useRouter()
+		const db = firebase.firestore()
+
+		// Obtener datos
+		let bookSearchData = computed(() => store.state.bookSearchData)
+
+		async function getBookSearchData() {
+			let snapshot = await db.collection("books").get()
+			snapshot.forEach((doc) => {
+				let info = doc.data()
+				store.commit("addData", {
+					id: doc.id,
+					name: info.name,
+				})
+			})
+		}
+		if (bookSearchData.value.length < 10) {
+			getBookSearchData()
+		}
+
+		// let fruits = ["manzana", "pera", "mango", "platano", "fresa", "uva"]
 		let input = ref(null)
-    let suggestions = ref([])
+		let suggestions = ref([])
 
 		function suggest() {
-      if (input.value.length < 2){
-        suggestions.value = []
-        return 0
-      }
-			suggestions.value = fruits.filter((fruit) =>
-				fruit.toLowerCase().includes(input.value)
+			if (input.value.length < 2) {
+				suggestions.value = []
+				return 0
+			}
+			suggestions.value = bookSearchData.value.filter((book) =>
+				book.name.toLowerCase().includes(input.value)
 			)
 		}
 
-    function goToSuggestion(book){
-      console.log(book)
-    }
+		function goToSuggestion(book) {
+			router.replace(`/book/${book.id}`)
+			input.value = null
+			suggestions.value = []
+		}
 
 		return {
 			input,
-      suggestions,
+			suggestions,
 			suggest,
-      goToSuggestion
+			goToSuggestion,
 		}
 	},
 }
 </script>
 
-<style lang="scss">
-#BookSearch {
-  position: relative;
-	display: flex;
-	padding: 0.5rem;
-	background: #ffeae9e9;
-	border-radius: 1rem;
-
-	input {
-		background: none;
-		border: none;
-		outline: none;
-	}
-
-  ul{
-    list-style: none;
-    position: absolute;
-    top: 2rem;
-    width: 95%;
-    background: gray;
-    color: #fff;
-  }
-
-	svg {
-		width: 1rem;
-		height: auto;
-	}
-}
-</style>
+<style src="@/assets/styles/BookSearch.scss"></style>

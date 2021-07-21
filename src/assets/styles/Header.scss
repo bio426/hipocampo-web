@@ -35,8 +35,9 @@
 		height: 7rem;
 
 		.container {
-			display: flex;
-			justify-content: space-between;
+			display: grid;
+			grid-template-columns: 2fr minmax(240px,1fr) 2fr;
+			column-gap: 4rem;
 			height: 100%;
 			border-bottom: 2px solid gray;
 		}
@@ -45,7 +46,6 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 30%;
 
 			a {
 				color: #1e1619;
@@ -53,16 +53,21 @@
 			}
 		}
 
-		img {
-			width: 20%;
-			height: auto;
+		.mainTitle{
+			display: flex;
+			align-items: center;
+
+			img {
+				width: 100%;
+				height: auto;
+				margin: auto 0;
+			}
 		}
 
 		.utils {
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
-			width: 30%;
 
 			a {
 				svg {
