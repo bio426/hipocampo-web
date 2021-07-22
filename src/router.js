@@ -9,6 +9,8 @@ const routes = [
 	{ path: "/book/:id", name: "book", component: () => import("@/views/book.vue") },
 	{ path: "/about", name: "about", component: () => import("@/views/about.vue") },
 	{ path: "/examples", name: "examples", component: () => import("@/views/examples.vue") },
+	{ path: "/contact", name: "contact", component: () => import("@/views/contact.vue") },
+	{ path: "/cart", name: "cart", component: () => import("@/views/cart.vue") },
 ]
 
 const router = createRouter({

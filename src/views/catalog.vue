@@ -48,6 +48,7 @@
 					:book="book"
 					noHover
 				/>
+				<Loading msg="Cargando Libros..." style="grid-column: span 5" />
 			</div>
 			<nav class="pagination">
 				<button>
@@ -89,6 +90,7 @@ import { ref, onMounted } from "vue"
 import firebase from "firebase/app"
 
 import Header from "@/components/Header.vue"
+import Loading from "@/components/Loading.vue"
 import Card from "@/components/Card.vue"
 import Footer from "@/components/Footer.vue"
 
@@ -96,6 +98,7 @@ export default {
 	name: "catalog",
 	components: {
 		Header,
+		Loading,
 		Card,
 		Footer,
 	},

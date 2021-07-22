@@ -1,7 +1,7 @@
 <template>
 	<header id="Header">
 		<div class="contactInfo">
-			<div class="container">
+			<div class="headerContainer">
 				<a href="#" v-for="i in 4" :key="i">
 					<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 						<g>
@@ -42,7 +42,7 @@
 			</div>
 		</div>
 		<div class="headerMain">
-			<div class="container">
+			<div class="headerContainer">
 				<div class="pageLinks">
 					<router-link to="/catalog">Catálogo</router-link>
 					<router-link to="/examples">Muestras</router-link>

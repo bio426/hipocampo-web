@@ -1,8 +1,8 @@
 <template>
-  <div id="about">
+  <div id="contact">
     <Header />
     <div class="container">
-      about page
+      Pagina contacto
     </div>
     <Footer />
   </div>
@@ -15,7 +15,7 @@ import Header from "@/components/Header.vue"
 import Footer from "@/components/Footer.vue"
 
 export default {
-  name: "about",
+  name: "contact",
   components: {
     Header,
     Footer
