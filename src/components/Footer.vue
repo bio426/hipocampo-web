@@ -1,6 +1,6 @@
 <template>
 	<footer id="Footer">
-		<img src="@/assets/images/hipocampo-noBackground.png" />
+		<img src="@/assets/images/hipocampo-noBackground-white.png" />
 		<div class="footerContainer">
 			<ul class="categories">
 				<li v-for="i in 7" :key="i">

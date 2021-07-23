@@ -1,7 +1,7 @@
 <template>
 	<div id="Bilboard">
 		<router-link class="show" to="">
-			<img src="https://picsum.photos/200/300" />
+			<img src="@/assets/images/banner1.jpg" />
 		</router-link>
 		<router-link to="/catalog">
 			<img src="https://picsum.photos/201/300" />
