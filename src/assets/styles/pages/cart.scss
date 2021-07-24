@@ -1,0 +1,41 @@
+#cart{
+  width: 100%;
+  min-height: 100vh;
+
+  .container{
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .cartWrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+
+    table{
+      border-collapse: collapse;
+
+      th{
+        background: gray;
+        border: 1px solid black;
+      }
+
+      td{
+        padding: 1rem;
+        background: peru;
+        border: 1px solid black;
+        text-align: center;
+
+        img{
+          width: 60%;
+          height: auto;
+          border: 1px solid gray;
+        }
+
+        button{
+          width: 100%;
+        }
+      }
+    }
+  }
+}

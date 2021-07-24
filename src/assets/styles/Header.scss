@@ -72,10 +72,28 @@
 			justify-content: space-between;
 			align-items: center;
 
-			a {
-				svg {
-					width: 2rem;
+			.cartInfo{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				padding: .2rem .5rem;
+				background: #ebc6af;
+				border: 1px solid #1e1619;
+				border-radius: 1rem;
+				cursor: pointer;
+
+				svg{
+					width: 1.6rem;
 					height: auto;
+				}
+
+				.price{
+					margin: 0 2rem;
+					font-weight: bold;
+				}
+
+				.quantity{
+					font-size: .8rem;
 				}
 			}
 		}
