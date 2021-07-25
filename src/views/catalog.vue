@@ -109,7 +109,7 @@ export default {
 		let last = null
 
 		async function getBooks() {
-			let snapshot = await db.collection("books").orderBy("name").limit(5).get()
+			let snapshot = await db.collection("books").orderBy("name").limit(10).get()
 			snapshot.forEach((doc) => {
 				books.value.push({
 					id: doc.id,

@@ -4,7 +4,7 @@
 		<span class="cardTitle">{{book.name}}</span>
 		<span class="cardAuthor">{{book.author}}</span>
 		<span class="cardPrice">S/ {{book.price || 0}}</span>
-		<button>
+		<button @click="addToCart">
 			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450.391 450.391">
 				<g>
 					<path
@@ -36,6 +36,7 @@
 
 <script>
 import { useRouter } from "vue-router"
+import {useStore} from "vuex"
 
 export default {
 	name: "Card",
@@ -45,13 +46,20 @@ export default {
 	},
 	setup(props){
 		const router = useRouter()
+		const store = useStore()
 
 		function goToBook(){
 			router.push(`/book/${props.book.id}`)
 		}
 
+		function addToCart(){
+			store.commit("addToCart",props.book)
+			console.log(props.book,"agregado")
+		}
+
 		return {
-			goToBook
+			goToBook,
+			addToCart
 		}
 	}
 }
