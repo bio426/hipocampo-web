@@ -1,13 +1,15 @@
 <template>
 	<div id="cart">
 		<Header />
+		<section class="indications">
+			<div class="container">
+				<p>
+					Usa los filtros para buscar los libros que desees. /
+					<strong>Mostrando 100 de 250 resultados</strong>
+				</p>
+			</div>
+		</section>
 		<div class="container">
-			<p>
-				Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore quod
-				ab tempore quo labore aspernatur non quos eos ad, asperiores, blanditiis
-				voluptatum laborum modi vero maxime iusto, atque libero in.
-			</p>
-			Cart content
 			<div class="cartWrapper">
 				<table>
 					<thead>
@@ -20,7 +22,7 @@
 						</tr>
 					</thead>
 					<tbody>
-						<tr>
+						<tr v-for="i in 5" :key="i">
 							<td>
 								<img src="https://picsum.photos/200/300" />
 							</td>
@@ -33,7 +35,43 @@
 						</tr>
 					</tbody>
 				</table>
-				<div class="order"></div>
+				<div class="order">
+					<h2>Detalles del pedido</h2>
+					<div class="details">
+						<section>
+							<h4>Subtotal</h4>
+							<span>S/ 99.99</span>
+						</section>
+						<section>
+							<h4>Subtotal</h4>
+							<span>S/ 99.99</span>
+						</section>
+						<section>
+							<h4>Subtotal</h4>
+							<span>S/ 99.99</span>
+						</section>
+					</div>
+					<h2>Informacion del cliente</h2>
+					<div class="client">
+						<label>
+							Nombre:
+							<input type="text" />
+						</label>
+						<label>
+							Telefono:
+							<input type="text" />
+						</label>
+						<label>
+							Correo:
+							<input type="text" />
+						</label>
+						<label>
+							Dirección:
+							<input type="text" />
+						</label>
+						<button>Enviar orden</button>
+					</div>
+				</div>
 			</div>
 		</div>
 		<Footer />

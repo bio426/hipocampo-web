@@ -36,7 +36,7 @@ export default {
 			margin: 8px;
 			border-radius: 50%;
 			border: 6px solid #000;
-			border-color: #000 transparent #000 transparent;
+			border-color: gray transparent gray transparent;
 			animation: lds-dual-ring 1.2s linear infinite;
 		}
 	}

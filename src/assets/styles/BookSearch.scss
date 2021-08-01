@@ -54,3 +54,12 @@
 		height: auto;
 	}
 }
+
+@media only screen and (max-width: 600px) {
+  #BookSearch{
+    width: 100%;
+    input{
+      width: 100%;
+    }
+  }
+}

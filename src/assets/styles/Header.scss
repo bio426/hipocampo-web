@@ -71,6 +71,7 @@
 			display: flex;
 			justify-content: space-between;
 			align-items: center;
+			flex-wrap: wrap;
 
 			.cartInfo{
 				display: flex;
@@ -100,6 +101,28 @@
 	}
 }
 
+@media only screen and (max-width: 1024px) {
+	#Header{
+		.headerMain{
+			.headerContainer{
+				grid-template-columns: 1fr;
+
+				.pageLinks{
+					margin: 1rem 0;
+				}
+
+				img{
+					width: 180px;
+				}
+			}
+
+			.mainTitle{
+				justify-content: center;
+			}
+		}
+	}
+}
+
 @media only screen and (max-width: 600px) {
 	#Header{
 		.contactInfo{
@@ -110,20 +133,36 @@
 			}
 		}
 
+		.headerContainer{
+			width: 90%;
+		}
+
 		.headerMain{
 			height: auto;
 
 			.headerContainer{
-				flex-direction: column-reverse;
+				grid-template-columns: 1fr;
 
 				.pageLinks{
-					width: 100%;
 					margin: 1rem 0;
+
+					a{
+						font-size: .8rem;
+					}
 				}
 
 				img{
-					order: 2;
-					margin: 0 auto;
+					width: 100%;
+				}
+
+				.utils{
+					flex-direction: column;
+					gap: .5rem;
+					margin: .5rem 0;
+
+					.cartInfo{
+						width: 100%;
+					}
 				}
 			}
 		}

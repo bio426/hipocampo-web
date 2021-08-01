@@ -97,7 +97,7 @@
 				</router-link>
 				<div class="utils">
 					<BookSearch />
-					<div class="cartInfo">
+					<div class="cartInfo" @click="goToCart">
 						<svg
 							viewBox="0 0 511.728 511.728"
 							xmlns="http://www.w3.org/2000/svg"
@@ -121,12 +121,24 @@
 
 <script>
 import BookSearch from "@/components/BookSearch.vue"
+import { useRouter} from "vue-router"
 
 export default {
 	name: "Header",
 	components: {
 		BookSearch,
 	},
+	setup(){
+		const router = useRouter()
+
+		function goToCart(){
+			router.push("/cart")
+		}
+
+		return {
+			goToCart
+		}
+	}
 }
 </script>
 

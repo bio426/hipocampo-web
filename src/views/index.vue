@@ -26,7 +26,7 @@
 				/>
 			</div>
 		</div>
-		<Authors v-if="true" />
+		<Authors v-if="false" />
 		<section class="subscription">
 			<h3>Lorem ipsum dolor sit amet consectetur.</h3>
 			<p>
