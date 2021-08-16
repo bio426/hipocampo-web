@@ -18,10 +18,10 @@
 			<div class="logoInfo">
 				<img src="@/assets/images/hipocampo.jpg" alt="logo principal" />
 				<div class="logoDescription">
-					<img
+					<!-- <img
 						src="@/assets/images/pintorHipocampo.jpg"
 						alt="description background"
-					/>
+					/> -->
 					<p>
 						<strong>El Caballito de mar</strong>, una tinta china del artista
 						plástico peruano Carlos Alberto Ostolaza, fue dibujado en una mesa

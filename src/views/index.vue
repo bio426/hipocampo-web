@@ -24,9 +24,9 @@
 		</div>
 		<Authors v-if="true" />
 		<section class="subscription">
-			<h3>Envianos tu correo.</h3>
+			<h3>Envíanos tu correo.</h3>
 			<p>
-				Podrass recibir noticias y notificaciones de nuevas publicaciones o
+				Podras recibir noticias y notificaciones de nuevas publicaciones o
 				eventos <br />
 				relacionados a Hipocampo Editores.
 			</p>

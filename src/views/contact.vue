@@ -2,7 +2,7 @@
   <div id="contact">
     <Header />
     <div class="container">
-      <h1>Contactanos</h1>
+      <h1>Contáctanos</h1>
       <h2>Teléfonos</h2>
       <section>
         <span>992812764</span>
