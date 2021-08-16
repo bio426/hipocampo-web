@@ -4,19 +4,20 @@
 		<section class="indications">
 			<div class="container">
 				<p>
-					Usa los filtros para buscar los libros que desees. /
-					<strong>Mostrando 100 de 250 resultados</strong>
+					Mostrando catalogo de libros disponibles. /
+					<strong>Mostrando {{ books.length }} de 58 resultados</strong>
+					<i>{{ route.query }}</i>
 				</p>
 			</div>
 		</section>
 		<div class="container">
-			<div class="filters">
+			<div class="filters" v-if="false">
 				<label>
 					Precio
 					<input type="range" />
 				</label>
 				<label>
-					Categoria
+					Ordenar por campo
 					<select name="category">
 						<option value="1">Category 1</option>
 						<option value="2">Category 2</option>
@@ -24,7 +25,7 @@
 					</select>
 				</label>
 				<label>
-					Año de publicacion xd
+					Dirección
 					<select name="year">
 						<option value="1">2001</option>
 						<option value="2">2002</option>
@@ -48,7 +49,10 @@
 					:book="book"
 					noHover
 				/>
-				<Loading msg="Cargando Libros...  " class="loaderStyle" v-if="!allBooksLoaded" />
+				<div class="loader" v-if="!allBooksLoaded">
+					Cargando Información
+					<div class="lds-dual-ring"></div>
+				</div>
 			</div>
 		</div>
 		<Footer />
@@ -56,11 +60,11 @@
 </template>
 
 <script>
-import { ref, onMounted } from "vue"
+import { ref } from "vue"
+import { useRoute } from "vue-router"
 import firebase from "firebase/app"
 
 import Header from "@/components/Header.vue"
-import Loading from "@/components/Loading.vue"
 import Card from "@/components/Card.vue"
 import Footer from "@/components/Footer.vue"
 
@@ -68,16 +72,14 @@ export default {
 	name: "catalog",
 	components: {
 		Header,
-		Loading,
 		Card,
 		Footer,
 	},
 	setup() {
 		const db = firebase.firestore()
+		const route = useRoute()
 
 		let books = ref([])
-		let last = null
-		let allBooksLoaded = ref(false)
 
 		async function getBooks() {
 			let snapshot = await db
@@ -94,11 +96,32 @@ export default {
 			last = books.value[books.value.length - 1].name
 			loadMore = true
 		}
-		getBooks()
+
+		async function getCategoryBooks() {
+			let snapshot = await db
+				.collection("books")
+				.where("categories", "array-contains", route.query.category)
+				.get()
+			snapshot.forEach((doc) => {
+				books.value.push({
+					id: doc.id,
+					...doc.data(),
+				})
+			})
+			allBooksLoaded.value = true
+		}
+
+		if (route.query.category) {
+			getCategoryBooks()
+		} else {
+			getBooks()
+			document.addEventListener("scroll", loadOnScroll)
+		}
 
 		// Infinite scroll
 		let loadMore = false
-		document.addEventListener("scroll", loadOnScroll)
+		let last = null
+		let allBooksLoaded = ref(false)
 
 		async function loadOnScroll() {
 			if (!loadMore && !allBooksLoaded.value) {
@@ -115,7 +138,7 @@ export default {
 					.startAfter(last)
 					.limit(5)
 					.get()
-				if (snapshot.empty){
+				if (snapshot.empty) {
 					allBooksLoaded.value = true
 				}
 				snapshot.forEach((doc) => {
@@ -125,15 +148,16 @@ export default {
 					})
 				})
 				last = books.value[books.value.length - 1].name
-				setTimeout(()=>{
+				setTimeout(() => {
 					loadMore = true
-				},2000)
+				}, 2000)
 			}
 		}
 
 		return {
 			books,
-			allBooksLoaded
+			allBooksLoaded,
+			route,
 		}
 	},
 }

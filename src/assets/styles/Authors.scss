@@ -5,6 +5,11 @@
   background: #513f44;
   color: #fff;
 
+  .container-author{
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .content{
     display: grid;
     grid-template-columns: 3fr 2fr;
@@ -75,6 +80,22 @@
         &:active{
           background: #e0987e;
         }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  #Authors{
+    .content{
+      grid-template-columns: 1fr;
+
+      .flexbin{
+        margin: 0;
+      }
+
+      .info{
+        display: none;
       }
     }
   }

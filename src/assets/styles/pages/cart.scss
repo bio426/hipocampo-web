@@ -14,16 +14,42 @@
     background: #ffe9d7;
   }
 
+  h2{
+    padding: 1rem 3rem;
+    font-weight: 500;
+  }
+
+  .wrapper{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    column-gap: 1rem;
+    row-gap: 1rem;
+    width: 100%;
+    margin-bottom: 3rem;
+  }
+
   .cartWrapper{
     display: grid;
     grid-template-columns: 2fr 1fr;
     column-gap: 2rem;
     margin-bottom: 3rem;
 
+    .tableContainer{
+      max-height: 70vh;
+      overflow: auto;
+    }
+
     table{
+      width: 100%;
       border-collapse: collapse;
 
+      tbody{
+        height: 500px;
+        overflow-y: scroll;
+      }
+
       th{
+        padding: 1rem;
         background: gray;
         border: 1px solid black;
       }
@@ -84,6 +110,18 @@
           font-weight: bold;
         }
       }
+    }
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #cart{
+    .container{
+      width: 90%;
+    }
+
+    .wrapper{
+      grid-template-columns: 1fr;
     }
   }
 }

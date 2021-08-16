@@ -4,8 +4,8 @@
 		<section class="indications">
 			<div class="container">
 				<p>
-					Usa los filtros para buscar los libros que desees. /
-					<strong>Mostrando 100 de 250 resultados</strong>
+					Mostrando detalles del libro. /
+					<strong>{{book.name}}</strong>
 				</p>
 			</div>
 		</section>
@@ -22,15 +22,47 @@
 				</div>
 				<div class="features">
 					<ul>
-						<li v-for="i in 6" :key="i">
-							<h5>Numero de paginas</h5>
-							<span>125 paginas</span>
+						<li>
+							<h5>Categoría</h5>
+							<span>{{ formatedCategories || "---" }}</span>
+						</li>
+						<li>
+							<h5>Idioma</h5>
+							<span>{{ book.language || "---" }}</span>
+						</li>
+						<li>
+							<h5>N° de páginas</h5>
+							<span>{{ book.pages || "---" }}</span>
+						</li>
+						<li>
+							<h5>Año de publicacion</h5>
+							<span>{{ book.publishing || "---" }}</span>
+						</li>
+						<li>
+							<h5>Características</h5>
+							<span>{{ book.characteristics || "---" }}</span>
+						</li>
+						<li>
+							<h5>Región del autor</h5>
+							<span>{{ book.language || "---" }}</span>
+						</li>
+						<li>
+							<h5>ISBN</h5>
+							<span>{{ book.isbn || "---" }}</span>
+						</li>
+						<li>
+							<h5>N° deposito legal</h5>
+							<span>{{ book.legalDeposit || "---" }}</span>
+						</li>
+						<li>
+							<h5>Lugar de edición</h5>
+							<span>{{ book.editionPlace || "---" }}</span>
 						</li>
 					</ul>
 					<div class="price">
-						<span class="main">S/ 99.99</span>
+						<span class="main">S/ {{ book.price }}</span>
 						<span class="discount">Descuento de S/ 00.00</span>
-						<button>
+						<button disabled>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								viewBox="0 0 450.391 450.391"
@@ -58,14 +90,14 @@
 									/>
 								</g>
 							</svg>
-							Agregar a orden
+							Próximamente
 						</button>
 					</div>
 				</div>
 			</section>
 			<h2>Libros Relacionados</h2>
 			<div class="wrapper">
-				<!-- <Card v-for="i in 5" :key="i" /> -->
+				<Card v-for="(book, index) in related" :key="index" :book="book" />
 			</div>
 		</div>
 		<Footer />
@@ -73,7 +105,7 @@
 </template>
 
 <script>
-import { ref, watch } from "vue"
+import { ref, computed, watch } from "vue"
 import { useRoute } from "vue-router"
 import firebase from "firebase/app"
 
@@ -100,19 +132,58 @@ export default {
 			price: 0,
 		})
 
+		let formatedCategories = computed(() => {
+			if (book.value.categories) {
+				let text = ""
+				for (let i = 0; i < book.value.categories.length; i++) {
+					if (i != 0) {
+						text = text + ", " + book.value.categories[i]
+						continue
+					}
+					text = text + book.value.categories[i]
+				}
+				return text
+			} else {
+				return 0
+			}
+		})
+
 		async function loadBookData() {
 			let snapshot = await db.collection("books").doc(route.params.id).get()
 			book.value = snapshot.data()
+
+			loadRelatedBooks()
 		}
 		loadBookData()
 
+		let related = ref([])
+
+		async function loadRelatedBooks() {
+			let snapshot = await db
+				.collection("books")
+				.where("categories", "array-contains", book.value.categories[0])
+				.limit(5)
+				.get()
+			snapshot.forEach((doc) => {
+				related.value.push({
+					id: doc.id,
+					...doc.data(),
+				})
+			})
+		}
+
 		watch(
 			() => route.params.id,
-			() => loadBookData()
+			() => {
+				related.value = []
+				loadBookData()
+			}
 		)
 
 		return {
 			book,
+			related,
+			formatedCategories,
 		}
 	},
 }

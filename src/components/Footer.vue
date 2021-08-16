@@ -3,29 +3,29 @@
 		<img src="@/assets/images/hipocampo-noBackground-white.png" />
 		<div class="footerContainer">
 			<ul class="categories">
-				<li v-for="i in 7" :key="i">
-					<a href="#">Category</a>
+				<li>
+					<router-link :to="{path:'/catalog',query:{category:'Ensayo'}}">Ensayo</router-link>
+				</li>
+				<li>
+					<router-link :to="{path:'/catalog',query:{category:'Narrativa'}}">Narrativa</router-link>
+				</li>
+				<li>
+					<router-link :to="{path:'/catalog',query:{category:'Poesía'}}">Poesía</router-link>
+				</li>
+				<li>
+					<router-link :to="{path:'/catalog',query:{category:'Filosofía'}}">Filosofía</router-link>
+				</li>
+				<li>
+					<router-link :to="{path:'/catalog',query:{category:'Texto de investigación'}}">Texto de investigación</router-link>
 				</li>
 			</ul>
 			<div class="info">
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-					culpa nostrum pariatur inventore, aut sint, unde quod dolorum possimus
-					eligendi hic repellat iste! Corporis architecto voluptatem odit autem
-					veritatis cum?
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-					culpa nostrum pariatur inventore, aut sint, unde quod dolorum possimus
-					eligendi hic repellat iste! Corporis architecto voluptatem odit autem
-					veritatis cum?
-				</p>
-				<p>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-					culpa nostrum pariatur inventore, aut sint, unde quod dolorum possimus
-					eligendi hic repellat iste! Corporis architecto voluptatem odit autem
-					veritatis cum?
-				</p>
+				<span>
+					© 2021 Derechos Reservados <strong>Hipocampo Editores</strong>
+				</span>
+				<span>
+					Made by <a href="https://www.github.com/bio426" target="_blank">Bildla</a>
+				</span>
 			</div>
 		</div>
 	</footer>

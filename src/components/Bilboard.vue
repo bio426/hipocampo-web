@@ -1,13 +1,10 @@
 <template>
 	<div id="Bilboard">
-		<router-link class="show" to="">
-			<img src="@/assets/images/banner1.jpg" />
+		<router-link class="show" to="/catalog">
+			<img src="@/assets/images/banner1.jpg" alt="imagen publicitaria" />
 		</router-link>
 		<router-link to="/catalog">
-			<img src="https://picsum.photos/201/300" />
-		</router-link>
-		<router-link to="">
-			<img src="https://picsum.photos/202/300" />
+			<img src="@/assets/images/banner2.png" alt="imagen publicitaria" />
 		</router-link>
 	</div>
 </template>
@@ -23,7 +20,7 @@ export default {
 		onMounted(() => {
 			let slider = document.getElementById("Bilboard")
 			banners = slider.children
-			setInterval(change, 3000)
+			setInterval(change, 6000)
 		})
 
 		function change() {

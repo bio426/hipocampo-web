@@ -34,18 +34,39 @@
 			<i>POR ROGER SANTIVÁÑEZ</i>
 			<div class="descriptionGrid">
 				<div class="flexbin">
-					<img src="https://picsum.photos/101/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/301/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/101/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/201/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/301/300" alt="imagen de galeria" />
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558152/Fotos%20eventos%20Hipocampo/IMG_20190920_121639-1024x768_nh6nvg.jpg"
+						alt="imagen de galeria"
+						class="small"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558152/Fotos%20eventos%20Hipocampo/presentacion-quierolo-1024x576_gqotsz.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558152/Fotos%20eventos%20Hipocampo/IMG_20190918_113323-1024x768_vbwhfb.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558151/Fotos%20eventos%20Hipocampo/premio-n-1024x576_b6mtro.jpg"
+						alt="imagen de galeria"
+						class="small"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558151/Fotos%20eventos%20Hipocampo/IMG_20180322_110453_soq6pv.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
 				</div>
 				<p>
 					CORRÍA la turbulenta década final del siglo XX en Lima, Perú, Sur de
 					América mientras un grupo de escritores y artistas se reunían todas
 					las noches en los bares del jirón Quilca, centro de la ciudad. Teófilo
 					Gutiérrez Jiménez autor del libro de cuentos Tiempos de Colambo
-					propuso la idea de publicar una revista. <br /> <br>
+					propuso la idea de publicar una revista. <br />
+					<br />
 					Quien redacta este testimonio era un asiduo de aquellas noches de
 					bohemia en el Bar de los Recuerdos -así denominado por la vieja música
 					de los 60s y 70s que allí podía escucharse- igualmente conocido como
@@ -53,7 +74,8 @@
 					el solariego Queirolo justo en la esquina con Camaná. En éste último
 					se destacaba la presencia vespertina de Carlos Jallo Villamonte -poeta
 					y novelista inédito entonces- quien fue uno de los primeros en acoger
-					la propuesta de Teófilo Gutiérrez. <br /> <br>
+					la propuesta de Teófilo Gutiérrez. <br />
+					<br />
 					Y planteó Killka Blues como nombre de la nueva revista. Pronto me sumé
 					al proyecto y así salió el primer y único número lanzado con una
 					tumultuosa presentación en el Queirolo en el verano de 1996. El
@@ -63,7 +85,8 @@
 					Teófilo Gutiérrez decidió proseguir con el proyecto, pero ésta vez se
 					trató de una iniciativa personal suya. Así nació la revista Hipocampo
 					de Oro nombre colocado en recuerdo y homenaje de Abraham Valdelomar.
-					Salieron dos números de la revista. <br /> <br>
+					Salieron dos números de la revista. <br />
+					<br />
 					Para ese entonces Gutiérrez ya abrigaba la idea de fundar un sello
 					editorial. La ocasión se presentó a fines de 1998 con la edición de
 					Secuestro en el jardín de las rosas, primer poemario de Dalmacia
@@ -77,7 +100,8 @@
 					repetiremos aquí el catálogo de sus publicaciones. Bástenos decir que
 					la calidad literaria y la pulcritud editorial son los signos
 					fundamentales de esta novísima empresa, a la que -con toda simpatía-
-					le auguramos larga y fructífera existencia. <br /> <br>
+					le auguramos larga y fructífera existencia. <br />
+					<br />
 					Su contribución al desarrollo de la literatura peruana de nuestros
 					días es insoslayable.NO SOLO por ser un poeta editado por Hipocampo
 					sino por haber estado al lado de Teófilo desde los momentos iniciales
@@ -85,7 +109,8 @@
 					página virtual. Conozco a Gutiérrez desde sus días de estudiante de
 					Literatura en San Marcos, sé de sus performances periodísticas en
 					diversos medios, como Somos de El Comercio, La República, los
-					desaparecidos La Voz, y El Universal. <br /> <br>
+					desaparecidos La Voz, y El Universal. <br />
+					<br />
 					Y recuerdo con nostalgia nuestros rociados encuentros en la bohemia
 					del Cercado, iniciados cierto crepúsculo de 1991 en el Galileo de
 					Camaná, que ya no existe. Como ya no existen Hudson Valdivia, Grover
@@ -94,7 +119,8 @@
 					quilquenses, personajes inolvidables que se nos han adelantado en el
 					inexorable rumbo del destino. Por eso quiero recordarlos ahora, porque
 					ellos estuvieron con nosotros en aquellas mesas tendidas, sobre esas
-					noches hundidas en la neblina de Lima. <br /> <br>
+					noches hundidas en la neblina de Lima. <br />
+					<br />
 					Siempre con el ánimo dispuesto para compartir un salud, una palabra
 					amable, un rock, una cita literaria o un nuevo libro. De esos días en
 					que la libertad colmaba mi vida -como la espuma los vasos de cerveza-
@@ -104,17 +130,99 @@
 					humana -a veces oculta- pero que de todos modos nos pertenece.
 				</p>
 				<div class="flexbin">
-					<img src="https://picsum.photos/101/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/301/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/101/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/201/300" alt="imagen de galeria" />
-					<img src="https://picsum.photos/301/300" alt="imagen de galeria" />
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558151/Fotos%20eventos%20Hipocampo/Antonio-Ureta-Hildebrando-Perez-Grande-y-TGJ-2017-1024x576_ohlevt.png"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558151/Fotos%20eventos%20Hipocampo/IMG_20190920_112723-1024x768_utd6xx.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558150/Fotos%20eventos%20Hipocampo/Feri-cuzco-768x1024_v6zdil.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558150/Fotos%20eventos%20Hipocampo/FERIA-TARAPOTO-768x1024_ky9gnr.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558150/Fotos%20eventos%20Hipocampo/Feria-libro-Tarapoto_ltlo2p.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
 				</div>
 			</div>
 			<i
 				>Collingswood, a orillas del río Cooper, New Jersey, 10 de febrero de
 				2008.</i
 			>
+			<div class="flexbin">
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558150/Fotos%20eventos%20Hipocampo/feria-huan-1024x477_qkwcuz.jpg"
+						alt="imagen de galeria"
+						class="small"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558149/Fotos%20eventos%20Hipocampo/feria-de-Lima-Lee-1024x768_q85kq8.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558149/Fotos%20eventos%20Hipocampo/feria-del-cusco_oiblfq.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558149/Fotos%20eventos%20Hipocampo/FERIA-DE-HUA-1024x768_g2rteg.jpg"
+						alt="imagen de galeria"
+						class="small"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558151/Fotos%20eventos%20Hipocampo/premio-nacional-1024x576_lh5o8k.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558149/Fotos%20eventos%20Hipocampo/Feria-Cusco-stand-2018-1024x768_l7k8p5.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558149/Fotos%20eventos%20Hipocampo/algunas-publicaciones-de-Hipocampo-1024x768_vcv3bp.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558125/Fotos%20eventos%20Hipocampo/Bolivarianito-Lima-Cilloniz-Alarcon-y-Teofilio-768x1024_wctrt2.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558125/Fotos%20eventos%20Hipocampo/entre-libro-y-campana-de-lectura-1024x656_gduyca.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558125/Fotos%20eventos%20Hipocampo/Fer-cuzcoo-948x1024_kvoze2.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558125/Fotos%20eventos%20Hipocampo/11953231_1130270763653712_6634001976486939261_n-1024x681_nwnu5p.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+					<img
+						src="https://res.cloudinary.com/hipocampo-editores/image/upload/v1626558149/Fotos%20eventos%20Hipocampo/Aniversario-Hipocampo-1_vswsqz.jpg"
+						alt="imagen de galeria"
+						class="lit"
+					/>
+				</div>
 		</div>
 		<Footer />
 	</div>

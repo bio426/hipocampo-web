@@ -101,8 +101,13 @@
 							background: #0087e4;
 						}
 
+						&:disabled{
+							background: gray;
+						}
+
 						svg {
-							margin-right: 0.5rem;
+							margin: auto 0;
+							margin-right: 0.3rem;
 							width: 1.4rem;
 							height: auto;
 							fill: #fff;

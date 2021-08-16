@@ -5,4 +5,6 @@ import store from "./store"
 
 import "./firebase"
 
+import "notyf/notyf.min.css"
+
 createApp(App).use(router).use(store).mount("#app")

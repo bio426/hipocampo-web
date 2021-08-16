@@ -5,12 +5,13 @@ import index from "@/views/index.vue"
 const routes = [
 	// { path: "/", name: "building", component: building },
 	{ path: "/", name: "index", component: index },
-	{ path: "/catalog", name: "catalog", component: () => import("@/views/catalog.vue") },
+	{ path: "/catalog/", name: "catalog", component: () => import("@/views/catalog.vue") },
 	{ path: "/book/:id", name: "book", component: () => import("@/views/book.vue") },
 	{ path: "/about", name: "about", component: () => import("@/views/about.vue") },
 	{ path: "/examples", name: "examples", component: () => import("@/views/examples.vue") },
 	{ path: "/contact", name: "contact", component: () => import("@/views/contact.vue") },
-	{ path: "/cart", name: "cart", component: () => import("@/views/cart.vue") },
+	//{ path: "/cart", name: "cart", component: () => import("@/views/cart.vue") },
+	{ path: "/:pathMatch(.*)*", name: "not-found", component: () => import("@/views/404.vue") },
 ]
 
 const router = createRouter({
