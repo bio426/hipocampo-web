@@ -1,10 +1,10 @@
 <template>
 	<div id="Bilboard">
 		<router-link class="show" to="/catalog">
-			<img src="@/assets/images/newbanner1.jpg" alt="imagen publicitaria" />
+			<img src="@/assets/images/banner1.jpg" alt="imagen publicitaria" />
 		</router-link>
 		<router-link to="/catalog">
-			<img src="@/assets/images/newbanner2.jpg" alt="imagen publicitaria" />
+			<img src="@/assets/images/banner2.jpg" alt="imagen publicitaria" />
 		</router-link>
 	</div>
 </template>

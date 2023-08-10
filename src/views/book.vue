@@ -5,7 +5,7 @@
 			<div class="container">
 				<p>
 					Mostrando detalles del libro. /
-					<strong>{{book.name}}</strong>
+					<strong>{{ book.name }}</strong>
 				</p>
 			</div>
 		</section>
@@ -20,6 +20,7 @@
 						{{ book.description }}
 					</p>
 				</div>
+				<!-- <pre>{{ book }}</pre> -->
 				<div class="features">
 					<ul>
 						<li>
@@ -44,7 +45,7 @@
 						</li>
 						<li>
 							<h5>Región del autor</h5>
-							<span>{{ book.language || "---" }}</span>
+							<span>{{ book.authorOrigin || "---" }}</span>
 						</li>
 						<li>
 							<h5>ISBN</h5>
